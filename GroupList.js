@@ -1,26 +1,24 @@
 import React from "react";
- import  Button  from "../components/Button"
-import { PlusCircle } from "lucide-react";
+//  import  Button  from "../components/Button"
+// import { PlusCircle } from "lucide-react";
 
-const GroupList = ({ groups, selectedGroup, setSelectedGroup, onAdd }) => (
-  <div className="bg-white p-4 rounded-2xl shadow-md flex flex-col h-full">
-    <h2 className="text-xl font-bold mb-4">Groups</h2>
-    <div className="flex-1 overflow-y-auto">
+function GroupList({ groups, onSelect, selectedGroup }) {
+  return (
+    <div className="group-list">
       {groups.map((group) => (
-        <Button
+        <div
           key={group._id}
-          variant={selectedGroup?._id === group._id ? "default" : "outline"}
-          onClick={() => setSelectedGroup(group)}
-          className="group"
+          className={`group-item ${selectedGroup?._id === group._id ? 'active' : ''}`}
+          onClick={() => onSelect(group)}
         >
-          {group.name}
-        </Button>
+          <div className="group-avatar">
+            {group.name.slice(0, 2).toUpperCase()}
+          </div>
+          <span>{group.name}</span>
+        </div>
       ))}
     </div>
-    <Button onClick={onAdd} className="new group">
-      <PlusCircle size={16} /> Add new group
-    </Button>
-  </div>
-);
+  );
+}
 
 export default GroupList;
