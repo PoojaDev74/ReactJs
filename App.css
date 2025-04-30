@@ -1,0 +1,150 @@
+.container {
+    display: flex;
+    height: 100vh;
+    font-family: sans-serif;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background: white;
+    padding: 20px 10px;
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid #ddd;
+  }
+
+  .sidebar .add-btn {
+    background-color: #1a1aff;
+    color: white;
+    width: 48px;
+    height: 48px;
+    font-size: 28px;
+    border: none;
+    border-radius: 50%;
+    align-self: center;
+    cursor: pointer;
+  }
+
+  .group {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background 0.3s;
+  }
+
+  .group:hover {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 5px;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #304ca0;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    line-height: 36px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main {
+    flex: 1;
+    padding: 40px;
+    background-color: #e5ebf5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .main img {
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .empty-state h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .empty-state p {
+    font-size: 14px;
+    color: #666;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+    padding-top: 10px;
+  }
+
+  .add-group-button {
+    position: absolute;
+    bottom: 10px;
+    left: 180px;
+    width: 50px;
+    height: 50px;
+    background-color: #3b008f; /* Deep purple */
+    color: white;
+    font-size: 32px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-group-button:hover {
+    background-color: #5900c3;
+  }
+
+  .notes {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+  }
+
+  .note {
+    background: #e0e0e0;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 6px;
+  }
+  
+  .input {
+    display: flex;
+    gap: 10px;
+  }
+
+  textarea {
+    flex: 1;
+    resize: none;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+  }
+
+  .welcome {
+    margin: auto;
+    text-align: center;
+    color: #888;
+  }
