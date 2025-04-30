@@ -1,0 +1,28 @@
+.note-editor {
+    display: flex;
+    padding: 1rem;
+    border-top: 1px solid white;
+    gap: 0.5rem;
+  }
+  
+  .note-editor textarea {
+    flex: 1;
+    padding: 0.75rem;
+    font-size: 1rem;
+    resize: none;
+  }
+  
+  .send-btn {
+    font-size: 1.5rem;
+    background-color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: not-allowed;
+  }
+  
+  .send-btn.active {
+    background-color: #053f7d;
+    color: white;
+    cursor: pointer;
+  }
+  
